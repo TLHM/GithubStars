@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="/static/javascript/jquery-2.1.4.min.js"></script>
+<script src="/static/javascript/jqueryBattle.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+<div id="content">
+   <div ng-controller="Champions">
+      <form class="form-horizontal">
+         <div class="formDiv">
+            <label>Contender Repo 1</label>
+            <input type="text" id="champ1_URL" class="urlInput"/>
+         </div>
+         <h3 id = "versus">VERSUS</h3>
+         <div class="formDiv">
+            <input type="text" id="champ2_URL" class="urlInput"/>
+            <label>Contender Repo 2</label>
+         </div>
+         <br>
+         <button class="btn">GO!</button>
+      </form>
+      <h3 id="message"></h3>
+
+      <div class="results" id="champ1_results">
+         <b>Repo 1:</b>
+         <p class="stars">Stars:</p>
+         <p class="watchers">Watchers:</p>
+         <p class="forks">Forks:</p>
+         <p class="sum">Total:</p>
+      </div>
+
+      <div class="results" id="champ2_results">
+         <b>Repo 2:</b>
+         <p class="stars">Stars:</p>
+         <p class="watchers">Watchers:</p>
+         <p class="forks">Forks:</p>
+         <p class="sum">Total:</p>
+      </div>
+
+      <div id="resultMessage">
+         <h2 id="winner"></h2>
+      </div>
+   </div>
+</div>
+
+{% endblock %}
